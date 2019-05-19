@@ -15,9 +15,15 @@ public class NovaEmpresa extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
 	@Override
-	protected void service(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 		
 		String nomeEmpresa = req.getParameter("nome");
+		
+		Empresa empresa = new Empresa();
+		empresa.setNome(nomeEmpresa);
+		
+		Banco banco = new Banco();
+		banco.adiciona(empresa);
 		
 		PrintWriter out = resp.getWriter();
 		out.println("<html>");
