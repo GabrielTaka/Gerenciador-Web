@@ -13,7 +13,10 @@
 	
 	<ul>
 		<c:forEach items="${empresas}" var="empresa">
-			<li> ${empresa.nome}</li>
+			<li>
+				${empresa.nome} 
+				 <a href="removeEmpresa"> remover </a>
+			</li>
 		</c:forEach>
 	</ul>	
 
