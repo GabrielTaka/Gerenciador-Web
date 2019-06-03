@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+import org.apache.jasper.tagplugins.jstl.core.ForEach;
+
 public class Banco {
 	
 	private static List<Empresa> lista = new ArrayList<>();
@@ -35,8 +37,7 @@ public class Banco {
 		Iterator<Empresa> it = lista.iterator();
 		
 		while(it.hasNext()) {
-			Empresa emp = it.next();
-			
+			Empresa emp = it.next();	
 			if( emp.getId().equals(id)) {
 				it.remove();
 			}
@@ -47,7 +48,19 @@ public class Banco {
 				lista.remove(empresa);
 			}
 		} */
-		
 	}
+
+	public Empresa mostraEmpresa(Integer id) {
+		Empresa empresa = new Empresa();
+		
+		for (Empresa empresa1 : lista) {
+			if(empresa1.getId().equals(id)) {
+				empresa = empresa1;
+			}
+		}
+		return empresa;
+	}
+
+
 }
 	
