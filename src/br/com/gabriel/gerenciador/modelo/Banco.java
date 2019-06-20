@@ -1,18 +1,16 @@
-package br.com.gabriel.gerenciador.servlet;
+package br.com.gabriel.gerenciador.modelo;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-import org.apache.jasper.tagplugins.jstl.core.ForEach;
 
 public class Banco {
 	
 	private static List<Empresa> lista = new ArrayList<>();
 	private static Integer chaveSequencial = 1;
 	
-	static {
-		
+	static {		
 		Empresa empresa = new Empresa();
 		empresa.setId(Banco.chaveSequencial++);
 		empresa.setNome("Empresa 01");
