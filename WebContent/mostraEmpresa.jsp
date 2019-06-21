@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="/gerenciador/editaEmpresa?id=${empresa.getId()}" method="post">
+	<form action="/gerenciador/entrada?acao=EditaEmpresa&id=${empresa.getId()}" method="post">
 		nome:
 		<input type="text" name="nomeEmpresa" value="${empresa.getNome()}"/>
 		<input type="submit" />

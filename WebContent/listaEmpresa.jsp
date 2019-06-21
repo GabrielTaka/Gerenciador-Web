@@ -15,8 +15,8 @@
 		<c:forEach items="${empresas}" var="empresa">
 			<li>
 				${empresa.nome} 
-				 <a href="removeEmpresa?id=${empresa.id}"> Remover </a> 
-				 <a href="mostraEmpresa?id=${empresa.id}"> Editar </a>
+				 <a href="entrada?acao=MostraEmpresa&id=${empresa.id}"> Editar </a> 
+				 <a href="entrada?acao=RemoveEmpresa&id=${empresa.id}"> Remover  </a>
 			</li>	
 		</c:forEach>
 	</ul>	

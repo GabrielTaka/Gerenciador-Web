@@ -1,4 +1,4 @@
-<%@page import="java.util.List, br.com.gabriel.gerenciador.servlet.Empresa"%>
+<%@page import="java.util.List, br.com.gabriel.gerenciador.modelo.Empresa"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <c:url value="/novaEmpresa" var="linkServer"/>
@@ -10,7 +10,7 @@
 </head>
 <body>
 	
-	<form action="/gerenciador/novaEmpresa" method="post">
+	<form action="/gerenciador/entrada?acao=NovaEmpresa" method="post">
 		nome: 
 		<input type="text" name="nome"/>
 		<input type="submit" />
