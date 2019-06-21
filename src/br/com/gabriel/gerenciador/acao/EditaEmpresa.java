@@ -8,9 +8,9 @@ import javax.servlet.http.HttpServletResponse;
 import br.com.gabriel.gerenciador.modelo.Banco;
 import br.com.gabriel.gerenciador.modelo.Empresa;
 
-public class EditaEmpresa {
+public class EditaEmpresa implements Acao{
 
-	public void executa (HttpServletRequest request, HttpServletResponse response) throws IOException {
+	public String executa (HttpServletRequest request, HttpServletResponse response) throws IOException {
 		String req = request.getParameter("id");
 		String reqName = request.getParameter("nomeEmpresa");
 		Integer id = Integer.valueOf(req);
@@ -19,6 +19,6 @@ public class EditaEmpresa {
 		Empresa empresa = banco.mostraEmpresa(id);	
 		empresa.setNome(reqName);
 	
-		response.sendRedirect("entrada?acao=ListaEmpresas");
+		return "redirect:entrada?acao=ListaEmpresas";
 	}
 }
