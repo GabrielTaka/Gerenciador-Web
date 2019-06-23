@@ -7,6 +7,8 @@
 <title>Insert title here</title>
 </head>
 <body>
+<c:import url="logout-parcial.jsp"></c:import> 
+
 	<form action="/gerenciador/entrada?acao=EditaEmpresa&id=${empresa.getId()}" method="post">
 		nome:
 		<input type="text" name="nomeEmpresa" value="${empresa.getNome()}"/>

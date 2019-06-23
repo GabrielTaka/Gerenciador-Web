@@ -10,7 +10,7 @@
 </head>
 
 <body>
-	
+	<c:import url="logout-parcial.jsp"></c:import> 
 	<ul>
 		<c:forEach items="${empresas}" var="empresa">
 			<li>
@@ -20,8 +20,5 @@
 			</li>	
 		</c:forEach>
 	</ul>	
-
-
-		
 </body>
 </html>
